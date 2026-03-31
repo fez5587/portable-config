@@ -1,0 +1,139 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "ollama2": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama 2 (main local)",
+      "options": {
+        "baseURL": "http://127.0.0.1:11434/v1",
+        "apiKey": "ollama",
+        "timeout": false,
+        "requestTimeout": 900000,
+        "chunkTimeout": 180000
+      },
+      "models": {
+        "devstral-small-2": {
+          "name": "Devstral Small 2"
+        },
+        "qwen2.5-coder:7b": {
+          "name": "Qwen 2.5 Coder (7B)"
+        }
+      }
+    },
+    "ollama3": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama 3 (12GB local)",
+      "options": {
+        "baseURL": "http://127.0.0.1:30069/v1",
+        "apiKey": "ollama",
+        "timeout": false,
+        "requestTimeout": 900000,
+        "chunkTimeout": 180000
+      },
+      "models": {
+        "qwen2.5-coder:7b": {
+          "name": "Qwen 2.5 Coder (7B)"
+        }
+      }
+    },
+    "anthropic": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Anthropic",
+      "options": {
+        "baseURL": "https://api.anthropic.com/v1"
+      },
+      "models": {
+        "claude-opus-4-6": {
+          "name": "Claude Opus 4.6"
+        }
+      }
+    },
+    "github-copilot": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "GitHub Copilot",
+      "models": {
+        "gpt-5-mini": {
+          "name": "GPT-5 Mini"
+        },
+        "grok-code-fast-1": {
+          "name": "Grok Code Fast 1"
+        }
+      }
+    },
+    "zai-coding-plan": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Z.AI Coding Plan",
+      "models": {
+        "glm-4.7-flash": {
+          "name": "GLM-4.7-Flash"
+        },
+        "glm-4.7-flashx": {
+          "name": "GLM-4.7-Flashx"
+        },
+        "glm-4.6": {
+          "name": "GLM-4.6"
+        }
+      }
+    },
+    "v0": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "v0 (Vercel)",
+      "options": {
+        "baseURL": "https://api.v0.dev/v1"
+      },
+      "models": {
+        "v0-pro": {
+          "name": "v0 Pro"
+        },
+        "v0-mini": {
+          "name": "v0 Mini"
+        }
+      }
+    },
+    "openrouter": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "OpenRouter",
+      "options": {
+        "baseURL": "https://openrouter.ai/api/v1"
+      },
+      "models": {
+        "nvidia/nemotron-3-super-120b-a12b:free": {
+          "name": "NVIDIA Nemotron 3 Super 120B A12B (Free)"
+        },
+        "stepfun/step-3.5-flash:free": {
+          "name": "StepFun Step 3.5 Flash (Free)"
+        },
+        "nvidia/nemotron-nano-12b-v2-vl:free": {
+          "name": "NVIDIA Nemotron Nano 12B V2 VL (Free)"
+        }
+      }
+    },
+    "opencode-zen": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "OpenCode Zen",
+      "options": {
+        "baseURL": "https://opencode.ai/zen/v1"
+      },
+      "models": {
+        "glm-5": {
+          "name": "GLM-5"
+        },
+        "kimi-k2.5": {
+          "name": "Kimi K2.5"
+        }
+      }
+    }
+  },
+  "permission": {
+    "read": "allow",
+    "edit": "allow",
+    "write": "allow",
+    "delete": "allow",
+    "execute": "allow"
+  },
+  "model": "zai-coding-plan/glm-4.7-flashx",
+  "small_model": "github-copilot/gpt-5-mini",
+  "plugin": [
+    "oh-my-opencode"
+  ]
+}
