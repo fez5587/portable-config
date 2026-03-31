@@ -14,6 +14,9 @@ echo "Installing OpenCode config to: $TARGET_DIR"
 mkdir -p "$TARGET_DIR"
 cp "$TEMPLATES_DIR/opencode.json" "$TARGET_DIR/opencode.json"
 cp "$TEMPLATES_DIR/oh-my-opencode.json" "$TARGET_DIR/oh-my-opencode.json"
+mkdir -p "$TARGET_DIR/scripts"
+cp "$TEMPLATES_DIR/scripts/openviking-mcp.js" "$TARGET_DIR/scripts/openviking-mcp.js"
+chmod +x "$TARGET_DIR/scripts/openviking-mcp.js"
 
 echo "Installing optional components (Node/Bun packages)..."
 if command -v bun >/dev/null 2>&1; then

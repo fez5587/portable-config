@@ -13,6 +13,8 @@ Write-Host "Installing OpenCode config to: $TargetDir"
 New-Item -ItemType Directory -Path $TargetDir -Force | Out-Null
 Copy-Item (Join-Path $TemplatesDir "opencode.json") (Join-Path $TargetDir "opencode.json") -Force
 Copy-Item (Join-Path $TemplatesDir "oh-my-opencode.json") (Join-Path $TargetDir "oh-my-opencode.json") -Force
+New-Item -ItemType Directory -Path (Join-Path $TargetDir "scripts") -Force | Out-Null
+Copy-Item (Join-Path $TemplatesDir "scripts\openviking-mcp.js") (Join-Path $TargetDir "scripts\openviking-mcp.js") -Force
 
 Write-Host "Installing optional components (Node/Bun packages)..."
 if (Get-Command bun -ErrorAction SilentlyContinue) {
